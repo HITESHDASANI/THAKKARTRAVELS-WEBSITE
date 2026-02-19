@@ -1,347 +1,51 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
   <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Thakkar Travels</title>
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
-  <link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
-  <link rel="stylesheet" href="./assets/style.css">
+  <title>Thakkar Travels | Flight Booking</title>
+  <link rel="stylesheet" href="style.css">
 </head>
-
 <body>
-  <div class="header">
-    <nav class="navbar">
-      <div class="container">
-        <input type="checkbox" name="bars" id="bars">
-        <div class="logo scroll-l">
-          <img src="./assets/\thakkar.jpg" height="30" alt="" srcset="">
-          <span>Thakkar <strong>Travels</strong></span>
-        </div>
 
-        
+<header>
+  <img src="logo.png" class="logo">
+  <h1>Thakkar Travels</h1>
+</header>
 
-        <div class="navigation  scroll-t">
-          <a href="#" class="nav-link">Home</a>
-          <a href="#" class="nav-link">Services</a>
-          <a href="#" class="nav-link">Offers</a>
-          <a href="#" class="nav-link">About</a>
-          <a href="#" class="nav-link">Contact</a>
+<nav>
+  <a href="index.html">Home</a>
+  <a href="booking.html">Book Flight</a>
+  <a href="#contact">Contact</a>
+</nav>
 
-        </div>
-        
+<section class="search">
+  <input id="from" placeholder="From (DEL)">
+  <input id="to" placeholder="To (BOM)">
+  <input id="date" type="date">
+  <input id="pax" type="number" placeholder="Passengers">
+  <button onclick="searchFlight()">Search Flights</button>
+</section>
 
-        <div class="controls  scroll-r">
-          <label class="icon bars" for="bars" ><i class="fa fa-bars"></i></label>
-          <div class="icon"><i class="fa fa-search"></i></div>
-          <div class="btn btn-signup">SignUp</div>
-          <div class="btn btn1-Login">Login</div>
-          <div class="login-container">
-            
-            <form id="loginForm" onsubmit="return validateForm()">
-              <div class="input-group">
-                <label for="username">Username</label>
-                <input type="text" id="username" name="username" placeholder="Enter your username" required>
-              </div>
-                    <div class="input-group">
-                <label for="password">Password</label>
-                <input type="password" id="password" name="password" placeholder="Enter your password" required>
-              </div>
-                    <button type="submit" class="login-btn">Login</button>
-            </form>
-          </div>
-        <script src="script.js"></script>
-        </div>
-        //LOGIN
-       
-      </div>
-    </nav>
+<div id="results"></div>
 
-    <div class="content">
-      <div class="head">
-        <h1>
-          Thakkar Travels The Best Way To find a great deal 
-        </h1>
-        <h5 class="subtitle">
-          We do the right to get The best offer to you ,The best and cheap flight,
-          let us to know what you need exactly that's
-          The best chalange for us
-        </h5>
-      </div>
+<footer id="contact">
+  <p>
+    All Right Reserved By 
+    <a href="#" class="brand">Thakkar Travels</a>
+  </p>
+  <p>
+    📍 71 Canning Street, 4th Floor, B-444, Kolkata – 700001  
+    📞 9433090837  
+    ✉️ thakkartravels.dasani@gmail.com
+  </p>
+</footer>
 
+<script>
+function searchFlight(){
+  document.getElementById("results").innerHTML =
+    "<h3>Demo Mode ON ✅ Live API connect karne ke liye backend ready hai.</h3>";
+}
+</script>
 
-      <div class="booking-box">
-        <div class="options   scroll-t">
-          <div class="option active">
-            <span>One Way</span>
-          </div>
-          <div class="option">
-            <span>Round Trip</span>
-          </div>
-          <div class="option">
-            <span>Multy Way</span>
-          </div>
-        </div>
-        <div class="form   scroll-b">
-          <div class="line">
-            <div class="box">
-              <label for="arrival">to</label>
-              <input type="text" id="arrival" placeholder="arrival..">
-            </div>
-            <div class="box">
-              <label for="departure">Form</label>
-              <input type="text" id="departure" placeholder="departure..">
-            </div>
-            <div class="box">
-              <label for="date">Date</label>
-              <input type="text" id="date" placeholder="">
-            </div>
-          </div>
-          <div class="line-r">
-            <button class="btn">find</button>
-          </div>
-
-        </div>
-      </div>
-    </div>
-  </div>
-
-
-  <section class="about" id="about">
-    <div class="container">
-      <div class="items">
-        <div class="item   scroll-l">
-          <div class="image">
-            <img src="./assets/about.png" alt="" srcset="">
-          </div>
-        </div>
-        <div class="item   scroll-r">
-          <h2 class="title">Easy way to go to your next destination</h2>
-          <div class="desc">
-            <p>
-              Choosing the next destination is always a challenge with so many options. How do you decide and what strategy do you use
-            </p>
-          </div>
-          <div class="list">
-            <ul>
-              <li>
-
-                <p>
-                  <i class="fa fa-angle-double-right"></i>
-                  make sure to check the weather forecast for your destination before book your trip.
-                </p>
-              </li>
-              <li>
-                <p>
-                  <i class="fa fa-angle-double-right"></i>
-                  check the safety conditions in your destination country before you book your trip. We don't want to go anywhere that is unsafe for tourists..
-                </p>
-              </li>
-            </ul>
-          </div>
-
-          <div class="controls">
-            <div class="icon">
-              <img src="./assets/google-play.png" alt="" srcset="">
-            </div>
-            <div class="icon">
-              <img src="./assets/app-store.png" alt="" srcset="">
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
-
-
-  </section>
-
-
-
-  <section class="services" id="services">
-    <div class="container">
-      <div class="heading">
-        <h2 class="title   scroll-b">
-          Our Services
-        </h2>
-        <p class="desc   scroll-t">
-          The company itself is a very successful company. The benefits of outdoor activities are the result of desire!
-        </p>
-      </div>
-      <div class="items">
-
-        <div class="item   scroll-l">
-          <div class="image">
-            <img src="./assets/travel insurance.jpg" alt="" srcset="">
-          </div>
-          <div class="details">
-            <h3 class="title">Travel Insurance</h3>
-            
-            <button class="btn">See all</button>
-          </div>
-
-
-        </div>
-
-        <div class="item   scroll-l">
-          <div class="image">
-            <img src="./assets/service-2.jpg" alt="" srcset="">
-          </div>
-          <div class="details">
-            <h3 class="title">Car Rent</h3>
-           
-            <button class="btn">See all</button>
-          </div>
-        </div>
-
-
-        <div class="item   scroll-r">
-          <div class="image">
-            <img src="./assets/service-3.jpg" alt="" srcset="">
-          </div>
-          <div class="details">
-            <h3 class="title">Air Ticket</h3>
-           
-            <button class="btn">See all</button>
-          </div>
-        </div>
-
-        <div class="item   scroll-r">
-          <div class="image">
-            <img src="./assets/service-4.jpg" alt="" srcset="">
-          </div>
-          <div class="details">
-            <h3 class="title">Hotel Booking</h3>
-            
-            <button class="btn">See all</button>
-          </div>
-        </div>
-
-
-
-      </div>
-    </div>
-
-
-  </section>
-
-
-
-
-  
-           
-          </div>
-        </div>
-
-
-      </div>
-    </div>
-
-
-  </section>
-
-
-  
-    
-          </div>
-        </div>
-       
-      </div>
-    </div>
-  </section>
-
-  <footer class="footer">
-    <div class="container">
-      <div class="socials">
-        <a href="#" class="s-link"><i class="fab fa-facebook-f"></i></a>
-        <a href="#" class="s-link"><i class="fab fa-twitter"></i></a>
-        <a href="#" class="s-link"><i class="fab fa-instagram"></i></a>
-        <a href="#" class="s-link"><i class="fab fa-linkedin-in"></i></a>
-        <a href="#" class="s-link"><i class="fa fa-heart"></i></a>
-
-      </div>
-    <div class="container">
-      <div class="items">
-        <div class="item   scroll-t">
-          <div class="head">
-            <div class="logo">
-              <img src="./assets/thakkar.jpg" height="30" alt="" srcset="">
-              <span>Thakkar <strong>Travels</strong></span>
-            </div>
-          </div>
-          <div class="body">
-            <div class="desc">
-              <p>
-                Thakkar Travels The Best Way To find a great deal 
-              </p>
-              <p class="subtitle">
-                We do the right to get The best offer to you ,The best and cheap flight,let us to know what you need exactly
-                 that's The best
-                chalange for us
-              </p>
-
-            </div>
-          </div>
-        </div>
-        <div class="item   scroll-t">
-          <div class="head">
-            <h3>Quick Links</h3>
-
-          </div>
-          <div class="body">
-            <ul class="links">
-              <li><a href="#home" class="link">home</a></li>
-              <li><a href="#service" class="link">services</a></li>
-              <li><a href="#about" class="link">about</a></li>
-              <li><a href="#contact" class="link">contact</a></li>
-              <li><a href="#reviews" class="link">reviews</a></li>
-
-            </ul>
-          </div>
-        </div>
-
-        <div class="item   scroll-t">
-          <div class="head">
-            <h3>Contact Us</h3>
-
-          </div>
-          <div class="body">
-            <ul class="links">
-              <li>+91 9433090837</li>
-              <li>+91 33 2963 0021</li>
-              <li>OPS@thakkartravels.com</li>
-              <li>71 Canning Street Kolkata, India</li>
-
-            </ul>
-          </div>
-        </div>
-        <div class="item   scroll-t">
-          <div class="head">
-            <h3>Subscribe Us</h3>
-
-          </div>
-          <div class="body">
-            <form action="" class="form">
-              <p>
-                The best promotion comming from our email
-              </p>
-              <div class="box">
-                <input type="email" placeholder="email...">
-                <button class="btn">subscribe</button>
-              </div>
-            </form>
-          </div>
-        </div>
-      </div>
-       
-      </div>
-      <div class="rights   scroll-b">
-        <p>All Right Reserved By <a href="#">Thakkar</a> Travels</p>
-      </div>
-  </footer>
-<script src="https://unpkg.com/scrollreveal"></script>
-<script src="./assets/main.js"></script>
 </body>
-
-
 </html>
